@@ -859,9 +859,26 @@ textarea::placeholder {
 }
 
 @media (max-width: 768px) {
+  .TESTIMONIALS-SKILLS {
+    grid-template-columns: 95% !important;
+    grid-template-areas:
+      " one "
+      " three  "
+      " five "
+      " two  "
+      " four  " !important;
+    justify-content: center;
+  }
   .three {
     & > div {
+      text-align: center;
       flex-direction: column !important;
+      & div {
+        text-align: center;
+        & p {
+          width: 100%;
+        }
+      }
     }
   }
   .imga img {
