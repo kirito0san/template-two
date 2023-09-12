@@ -779,7 +779,7 @@ button.MORE {
         background-color: transparent;
         padding: 10px;
         border: 0;
-        caret-color: var(--main-font-color) ;
+        caret-color: var(--main-font-color);
         outline: 0;
       }
       & input[type="submit"] {
@@ -791,7 +791,6 @@ button.MORE {
         color: var(--main-font-color-1);
         border: 0;
         cursor: pointer;
-
       }
     }
   }
@@ -855,15 +854,19 @@ button.MORE {
     }
   }
 }
-textarea::placeholder{
-    padding: 20px;
+textarea::placeholder {
+  padding: 20px;
 }
 
 @media (max-width: 768px) {
-.imga img{
+  .three {
+    & > div {
+      flex-direction: column !important;
+    }
+  }
+  .imga img {
     height: 100%;
-
-}
+  }
   .CONTACT-form-big {
     flex-direction: column;
     & form {
@@ -936,49 +939,49 @@ textarea::placeholder{
     width: 100% !important;
   }
 }
-footer{
-    position: relative;
+footer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 500px;
+  align-items: center;
+  color: var(--main-font-color-1);
+  text-align: center;
+  &::after {
+    content: "";
     width: 100%;
-    overflow: hidden;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: var(--main-background-color);
+    opacity: 0.7;
+    z-index: -1;
+  }
+  & > img {
+    width: 100%;
     height: 500px;
-    align-items: center;
-    color: var(--main-font-color-1);
-    text-align: center;
-    &::after{
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        background-color: var(--main-background-color);
-        opacity: .7;
-                z-index: -1;
+    position: absolute;
+    z-index: -1;
+  }
+  & > div:nth-of-type(1) {
+    padding: 50px 0;
+  }
+  & > div:nth-of-type(2) {
+    gap: 30px;
+    & h5 {
+      padding-top: 50px;
+      font-weight: 500;
+      font-size: 1.5rem;
     }
-    & > img{
-        width: 100%;
-        height: 500px;
-        position: absolute;
-        z-index: -1;
+    & div > i {
+      margin: 0 25px;
+      margin-bottom: 100px;
     }
-        & > div:nth-of-type(1){
-            padding: 50px 0;
-    }
-    & > div:nth-of-type(2){
-        gap: 30px;
-        & h5{
-            padding-top: 50px;
-            font-weight: 500;
-            font-size: 1.5rem;
-        }
-        & div > i{
-            margin: 0 25px;
-            margin-bottom: 100px;
-        }
-                }
-        & div  i{
-            margin: 0 5px;
-        }
-    }
+  }
+  & div i {
+    margin: 0 5px;
+  }
+}
 /* media */
 @media (max-width: 988px) {
   .formaaa {
